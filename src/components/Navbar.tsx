@@ -2,29 +2,76 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
-import { AppBar, Box, Button, Container, Toolbar } from "@mui/material";
+import {
+  AppBar,
+  Box,
+  Button,
+  Container,
+  Divider,
+  Drawer,
+  IconButton,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+  Toolbar,
+  Typography,
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+
+const items = [
+  { label: "About", link: "#about" },
+  { label: "Product", link: "#product" },
+  { label: "Team", link: "#team" },
+  { label: "Contact", link: "#contact" },
+  { label: "Get Started", link: "" },
+];
 
 export const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const [mobileOpen, setMobileOpen] = useState<boolean>(false);
 
-  const items = [
-    { label: "About", link: "#about" },
-    { label: "Product", link: "#product" },
-    { label: "Team", link: "#team" },
-    { label: "Contact", link: "#contact" },
-    { label: "Get Started", link: "" },
-  ];
+  const handleDrawerToggle = () => {
+    setMobileOpen((prevState) => !prevState);
+  };
+
+  const drawer = (
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+      <Typography variant="h6" sx={{ my: 2 }}>
+        Syntinel Nyx
+      </Typography>
+      <Divider />
+      <List>
+        {items.map((item) => (
+          <ListItem key={item.label} disablePadding>
+            <ListItemButton
+              sx={{
+                textAlign: "center",
+                justifyContent: "center",
+                color: "primary.dark",
+              }}
+            >
+              <Link href={item.link}>
+                <ListItemText
+                  primary={item.label}
+                  sx={{
+                    textAlign: "center",
+                  }}
+                />
+              </Link>
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 0);
     };
-
     window.addEventListener("scroll", handleScroll);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -43,7 +90,7 @@ export const Navbar = () => {
       }}
     >
       <Container maxWidth="xl">
-        <Box sx={{ display: "flex" }}>
+        <Box sx={{ display: "flex", alignItems: "center" }}>
           <Box
             component="img"
             alt="Logo of Syntinel Nyx"
@@ -55,7 +102,7 @@ export const Navbar = () => {
               maxWidth: 300,
             }}
           />
-          <Toolbar sx={{ marginLeft: "auto" }}>
+          <Toolbar sx={{ marginLeft: "auto", display: "flex" }}>
             <Box sx={{ display: { xs: "none", sm: "flex" } }}>
               {items.map((item) => (
                 <Button
@@ -67,8 +114,35 @@ export const Navbar = () => {
                 </Button>
               ))}
             </Box>
+            <IconButton
+              color="primary"
+              aria-label="open drawer"
+              edge="end"
+              onClick={handleDrawerToggle}
+              sx={{ display: { xs: "block", sm: "none" } }}
+            >
+              <MenuIcon />
+            </IconButton>
           </Toolbar>
         </Box>
+        <Drawer
+          variant="temporary"
+          anchor="top"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true,
+          }}
+          sx={{
+            display: { xs: "block", sm: "none" },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: "100%",
+            },
+          }}
+        >
+          {drawer}
+        </Drawer>
       </Container>
     </AppBar>
   );
