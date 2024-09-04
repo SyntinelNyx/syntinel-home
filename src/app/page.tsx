@@ -1,6 +1,7 @@
 import { Typography, Box } from "@mui/material";
 
 import BackgroundImage from "@/components/BackgroundImage";
+import AnimatedText from "@/components/AnimatedText";
 
 export default function Home() {
   return (
@@ -27,16 +28,12 @@ export default function Home() {
         sx={{
           textAlign: "center",
           marginTop: 20,
-          color: "primary.dark",
         }}
       >
-        Syntinel Nyx
+        <AnimatedText text="Syntinel Nyx" />
       </Typography>
-      <Typography
-        variant="h5"
-        sx={{ textAlign: "center", padding: 1, color: "primary.main" }}
-      >
-        A solution to all your problems.
+      <Typography variant="h5" sx={{ textAlign: "center", padding: 1 }}>
+        <AnimatedText text="A solution to all your problems." />
       </Typography>
     </Box>
   );

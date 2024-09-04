@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 
 import { Box } from "@mui/material";
 
@@ -19,15 +18,20 @@ const BackgroundImage = ({
   return (
     <>
       {/* Background Image */}
-      <Box sx={{ position: "absolute", inset: 0, zIndex: -1 }}>
-        <Image
-          src={src}
-          alt={alt}
-          layout="fill"
-          objectFit="cover"
-          style={{ filter: `brightness(${brightness}%)` }}
-        />
-      </Box>
+      <Box
+        component="img"
+        src={src}
+        alt={alt}
+        sx={{
+          position: "absolute",
+          inset: 0,
+          zIndex: -1,
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          filter: `brightness(${brightness}%)`,
+        }}
+      />
       {/* Overlay */}
       <Box
         sx={{
