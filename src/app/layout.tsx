@@ -4,8 +4,8 @@ import { Zilla_Slab } from "next/font/google";
 import { Box } from "@mui/material";
 
 import "@/app/globals.css";
-import { Navbar } from "@/components/Navbar";
-import { ThemeProviderWrapper } from "@/components/ThemeProviderWrapper";
+import Navbar from "@/components/Navbar";
+import ThemeProviderWrapper from "@/components/ThemeProviderWrapper";
 
 const zilla = Zilla_Slab({ weight: "500", subsets: ["latin"] });
 

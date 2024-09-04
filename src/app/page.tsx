@@ -1,7 +1,43 @@
-import Image from "next/image";
+import { Typography, Box } from "@mui/material";
+
+import BackgroundImage from "@/components/BackgroundImage";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24"></main>
+    <Box
+      component="section"
+      id="about"
+      sx={{
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        padding: 5,
+      }}
+    >
+      <BackgroundImage
+        src="/hero.jpg"
+        alt="Background Hero Banner"
+        brightness={75}
+        rgb="255, 255, 255"
+        opacity={0.3}
+      />
+      <Typography
+        variant="h2"
+        sx={{
+          textAlign: "center",
+          marginTop: 20,
+          color: "primary.dark",
+        }}
+      >
+        Syntinel Nyx
+      </Typography>
+      <Typography
+        variant="h5"
+        sx={{ textAlign: "center", padding: 1, color: "primary.main" }}
+      >
+        A solution to all your problems.
+      </Typography>
+    </Box>
   );
 }

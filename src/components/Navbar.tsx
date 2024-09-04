@@ -27,7 +27,7 @@ const items = [
   { label: "Get Started", link: "" },
 ];
 
-export const Navbar = () => {
+const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
 
@@ -147,3 +147,5 @@ export const Navbar = () => {
     </AppBar>
   );
 };
+
+export default Navbar;

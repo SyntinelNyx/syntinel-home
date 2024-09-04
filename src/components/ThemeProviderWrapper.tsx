@@ -2,7 +2,7 @@
 import { ThemeProvider, CssBaseline } from "@mui/material";
 import defaultTheme from "@/themes/default";
 
-export const ThemeProviderWrapper = ({
+const ThemeProviderWrapper = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -14,3 +14,5 @@ export const ThemeProviderWrapper = ({
     </ThemeProvider>
   );
 };
+
+export default ThemeProviderWrapper;
