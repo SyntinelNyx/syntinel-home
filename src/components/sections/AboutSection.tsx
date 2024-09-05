@@ -42,7 +42,7 @@ const AboutSection = () => {
             fontStyle: "italic",
           }}
         >
-          <AnimatedText text="A solution to all of your problems." />
+          <AnimatedText text="The problem to all of your solutions" />
         </Typography>
       </Box>
     </>
