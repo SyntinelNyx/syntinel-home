@@ -81,11 +81,14 @@ const Navbar = () => {
     <AppBar
       elevation={0}
       sx={{
-        backgroundColor: isScrolled ? "background.default" : "transparent",
+        backgroundColor: isScrolled
+          ? "rgba(237, 242, 251, 0.5);"
+          : "transparent",
         paddingY: 1,
         boxShadow: isScrolled
           ? "20px 20px 60px #d0d0d0, -20px -20px 60px #f0f0f0;"
           : null,
+        backdropFilter: isScrolled ? "blur(15px) saturate(180%)" : null,
         transition: "background-color 0.3s",
       }}
     >
@@ -105,13 +108,21 @@ const Navbar = () => {
           <Toolbar sx={{ marginLeft: "auto", display: "flex" }}>
             <Box sx={{ display: { xs: "none", sm: "flex" } }}>
               {items.map((item) => (
-                <Button
+                <Box
                   key={item.label}
-                  variant="text"
-                  sx={{ color: "primary.dark", margin: 1, fontSize: 20 }}
+                  sx={{
+                    color: "primary.dark",
+                    marginLeft: 5,
+                    fontSize: 24,
+                    cursor: "pointer",
+                    ":hover": {
+                      color: "primary.main",
+                      textDecoration: "underline",
+                    },
+                  }}
                 >
-                  <Link href={item.link}>{item.label}</Link>
-                </Button>
+                  <Link href={item.link}>{item.label.toLocaleUpperCase()}</Link>
+                </Box>
               ))}
             </Box>
             <IconButton
