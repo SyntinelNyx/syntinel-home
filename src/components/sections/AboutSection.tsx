@@ -14,6 +14,7 @@ const AboutSection = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          justifyContent: "center",
           padding: 5,
         }}
       >
@@ -24,26 +25,27 @@ const AboutSection = () => {
           rgb="255, 255, 255"
           opacity={0.3}
         />
-        <Typography
-          variant="h2"
-          sx={{
-            textAlign: "center",
-            marginTop: 20,
-            fontWeight: "bold",
-          }}
-        >
-          <AnimatedText text="Syntinel Nyx" />
-        </Typography>
-        <Typography
-          variant="h5"
-          sx={{
-            textAlign: "center",
-            padding: 1,
-            fontStyle: "italic",
-          }}
-        >
-          <AnimatedText text="The problem to all of your solutions" />
-        </Typography>
+        <Box sx={{ marginBottom: "20vh" }}>
+          <Typography
+            variant="h2"
+            sx={{
+              textAlign: "center",
+              fontWeight: "bold",
+            }}
+          >
+            <AnimatedText text="Syntinel Nyx" />
+          </Typography>
+          <Typography
+            variant="h5"
+            sx={{
+              textAlign: "center",
+              padding: 1,
+              fontStyle: "italic",
+            }}
+          >
+            <AnimatedText text="The problem to all of your solutions" />
+          </Typography>
+        </Box>
       </Box>
     </>
   );

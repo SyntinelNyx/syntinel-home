@@ -106,7 +106,11 @@ const Navbar = () => {
             }}
           />
           <Toolbar sx={{ marginLeft: "auto", display: "flex" }}>
-            <Box sx={{ display: { xs: "none", sm: "flex" } }}>
+            <Box
+              sx={{
+                display: { xs: "none", lg: "flex" },
+              }}
+            >
               {items.map((item) => (
                 <Box
                   key={item.label}
@@ -130,7 +134,9 @@ const Navbar = () => {
               aria-label="open drawer"
               edge="end"
               onClick={handleDrawerToggle}
-              sx={{ display: { xs: "block", sm: "none" } }}
+              sx={{
+                display: { xs: "block", lg: "none" },
+              }}
             >
               <MenuIcon />
             </IconButton>
@@ -145,7 +151,7 @@ const Navbar = () => {
             keepMounted: true,
           }}
           sx={{
-            display: { xs: "block", sm: "none" },
+            display: { xs: "block", lg: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: "100%",
