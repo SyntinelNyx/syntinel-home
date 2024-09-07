@@ -1,6 +1,5 @@
 import { Typography, Box } from "@mui/material";
 
-import BackgroundImage from "@/components/BackgroundImage";
 import AnimatedText from "@/components/AnimatedText";
 
 const AboutSection = () => {
@@ -10,37 +9,45 @@ const AboutSection = () => {
         component="section"
         id="about"
         sx={{
-          minHeight: "100vh",
+          minHeight: "130vh",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          justifyContent: "center",
           padding: 5,
         }}
       >
-        <BackgroundImage
-          src="/hero.jpg"
-          alt="Background Hero Banner"
-          brightness={75}
-          rgb="255, 255, 255"
-          opacity={0.3}
+        <Box
+          component="img"
+          src={"/hero.jpg"}
+          alt={"Background Hero Banner"}
+          sx={{
+            position: "absolute",
+            inset: 0,
+            zIndex: -1,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            marginTop: "30vh",
+            filter: "invert(1)",
+          }}
         />
-        <Box sx={{ marginBottom: "20vh" }}>
+        <Box sx={{ marginTop: "5vh" }}>
           <Typography
-            variant="h2"
+            variant="h1"
             sx={{
               textAlign: "center",
+              fontFamily: "Quantum, sans-serif",
               fontWeight: "bold",
             }}
           >
-            <AnimatedText text="Syntinel Nyx" />
+            <AnimatedText text="syntinel" />
           </Typography>
           <Typography
             variant="h5"
             sx={{
               textAlign: "center",
-              padding: 1,
               fontStyle: "italic",
+              padding: 1,
             }}
           >
             <AnimatedText text="The problem to all of your solutions" />

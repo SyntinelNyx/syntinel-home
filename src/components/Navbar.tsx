@@ -5,7 +5,6 @@ import Link from "next/link";
 import {
   AppBar,
   Box,
-  Button,
   Container,
   Divider,
   Drawer,
@@ -37,8 +36,16 @@ const Navbar = () => {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        Syntinel Nyx
+      <Typography
+        variant="h6"
+        sx={{
+          fontFamily: "Quantum, sans-serif",
+          fontWeight: "bold",
+          fontSize: 32,
+          my: 2,
+        }}
+      >
+        syntinel
       </Typography>
       <Divider />
       <List>
@@ -48,7 +55,6 @@ const Navbar = () => {
               sx={{
                 textAlign: "center",
                 justifyContent: "center",
-                color: "primary.dark",
               }}
             >
               <Link href={item.link}>
@@ -79,14 +85,12 @@ const Navbar = () => {
 
   return (
     <AppBar
-      elevation={0}
+      elevation={1}
       sx={{
-        backgroundColor: isScrolled
-          ? "rgba(237, 242, 251, 0.5);"
-          : "transparent",
+        backgroundColor: isScrolled ? "rgba(39, 39, 39, 0.5);" : "transparent",
         paddingY: 1,
         boxShadow: isScrolled
-          ? "20px 20px 60px #d0d0d0, -20px -20px 60px #f0f0f0;"
+          ? "20px 20px 25px #1d1d1d, -20px -20px 25px #313131;"
           : null,
         backdropFilter: isScrolled ? "blur(15px) saturate(180%)" : null,
         transition: "background-color 0.3s",
@@ -94,17 +98,14 @@ const Navbar = () => {
     >
       <Container maxWidth="xl">
         <Box sx={{ display: "flex", alignItems: "center" }}>
-          <Box
-            component="img"
-            alt="Logo of Syntinel Nyx"
-            src="/syntinel-nyx-long.png"
+          <Typography
             sx={{
-              padding: 3,
-              height: "auto",
-              width: "100%",
-              maxWidth: 300,
+              fontFamily: "Quantum, sans-serif",
+              fontSize: 52,
             }}
-          />
+          >
+            syn
+          </Typography>
           <Toolbar sx={{ marginLeft: "auto", display: "flex" }}>
             <Box
               sx={{
@@ -115,13 +116,12 @@ const Navbar = () => {
                 <Box
                   key={item.label}
                   sx={{
-                    color: "primary.dark",
                     marginLeft: 5,
                     fontSize: 24,
+                    fontWeight: "bold",
                     cursor: "pointer",
                     ":hover": {
-                      color: "primary.main",
-                      textDecoration: "underline",
+                      color: "primary.dark",
                     },
                   }}
                 >
@@ -130,7 +130,6 @@ const Navbar = () => {
               ))}
             </Box>
             <IconButton
-              color="primary"
               aria-label="open drawer"
               edge="end"
               onClick={handleDrawerToggle}

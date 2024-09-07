@@ -5,3 +5,10 @@
 html {
   scroll-behavior: smooth;
 }
+
+@font-face {
+  font-family: "Quantum";
+  src: url("/fonts/Quantum.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
