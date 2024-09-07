@@ -84,83 +84,90 @@ const Navbar = () => {
   }, []);
 
   return (
-    <AppBar
-      elevation={1}
-      sx={{
-        backgroundColor: isScrolled ? "rgba(39, 39, 39, 0.5);" : "transparent",
-        paddingY: 1,
-        boxShadow: isScrolled
-          ? "20px 20px 25px #1d1d1d, -20px -20px 25px #313131;"
-          : null,
-        backdropFilter: isScrolled ? "blur(15px) saturate(180%)" : null,
-        transition: "background-color 0.3s",
-      }}
-    >
-      <Container maxWidth="xl">
-        <Box sx={{ display: "flex", alignItems: "center" }}>
-          <Typography
+    <>
+      <AppBar
+        elevation={0}
+        sx={{
+          backgroundColor: isScrolled
+            ? "rgba(39, 39, 39, 0.5);"
+            : "transparent",
+          paddingY: 1,
+          boxShadow: isScrolled
+            ? "20px 20px 25px #1d1d1d, -20px -20px 25px #313131;"
+            : null,
+          backdropFilter: isScrolled ? "blur(15px) saturate(180%)" : null,
+          transition: "background-color 0.3s",
+        }}
+      >
+        <Container maxWidth="xl">
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <Typography
+              sx={{
+                fontFamily: "Quantum, sans-serif",
+                fontSize: 52,
+                marginTop: -1,
+                marginX: 1,
+              }}
+            >
+              syn
+            </Typography>
+            <Toolbar sx={{ marginLeft: "auto", display: "flex" }}>
+              <Box
+                sx={{
+                  display: { xs: "none", lg: "flex" },
+                }}
+              >
+                {items.map((item) => (
+                  <Box
+                    key={item.label}
+                    sx={{
+                      marginLeft: 5,
+                      fontSize: 24,
+                      fontWeight: "bold",
+                      cursor: "pointer",
+                      ":hover": {
+                        color: "primary.dark",
+                      },
+                    }}
+                  >
+                    <Link href={item.link}>{item.label}</Link>
+                  </Box>
+                ))}
+              </Box>
+              <IconButton
+                aria-label="open drawer"
+                edge="end"
+                onClick={handleDrawerToggle}
+                sx={{
+                  color: "primary",
+                  display: { xs: "block", lg: "none" },
+                }}
+              >
+                <MenuIcon />
+              </IconButton>
+            </Toolbar>
+          </Box>
+          <Drawer
+            variant="temporary"
+            anchor="top"
+            open={mobileOpen}
+            onClose={handleDrawerToggle}
+            ModalProps={{
+              keepMounted: true,
+            }}
             sx={{
-              fontFamily: "Quantum, sans-serif",
-              fontSize: 52,
+              display: { xs: "block", lg: "none" },
+              "& .MuiDrawer-paper": {
+                boxSizing: "border-box",
+                width: "100%",
+              },
             }}
           >
-            syn
-          </Typography>
-          <Toolbar sx={{ marginLeft: "auto", display: "flex" }}>
-            <Box
-              sx={{
-                display: { xs: "none", lg: "flex" },
-              }}
-            >
-              {items.map((item) => (
-                <Box
-                  key={item.label}
-                  sx={{
-                    marginLeft: 5,
-                    fontSize: 24,
-                    fontWeight: "bold",
-                    cursor: "pointer",
-                    ":hover": {
-                      color: "primary.dark",
-                    },
-                  }}
-                >
-                  <Link href={item.link}>{item.label.toLocaleUpperCase()}</Link>
-                </Box>
-              ))}
-            </Box>
-            <IconButton
-              aria-label="open drawer"
-              edge="end"
-              onClick={handleDrawerToggle}
-              sx={{
-                display: { xs: "block", lg: "none" },
-              }}
-            >
-              <MenuIcon />
-            </IconButton>
-          </Toolbar>
-        </Box>
-        <Drawer
-          variant="temporary"
-          anchor="top"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true,
-          }}
-          sx={{
-            display: { xs: "block", lg: "none" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: "100%",
-            },
-          }}
-        >
-          {drawer}
-        </Drawer>
-      </Container>
-    </AppBar>
+            {drawer}
+          </Drawer>
+        </Container>
+      </AppBar>
+    </>
   );
 };
 

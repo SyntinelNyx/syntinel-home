@@ -18,7 +18,7 @@ const themeOptions: ThemeOptions = {
     },
   },
   typography: {
-    fontFamily: "Zilla Slab",
+    fontFamily: "Montserrat, sans-serif",
   },
 };
 

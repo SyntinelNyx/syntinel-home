@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 const ContactSection = () => {
   return (
@@ -7,13 +7,18 @@ const ContactSection = () => {
         component="section"
         id="contact"
         sx={{
-          minHeight: "100vh",
+          minHeight: "50vh",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          textAlign: "center",
           padding: 5,
         }}
-      ></Box>
+      >
+        <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+          Contact
+        </Typography>
+      </Box>
     </>
   );
 };

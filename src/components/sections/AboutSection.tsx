@@ -13,6 +13,7 @@ const AboutSection = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          textAlign: "center",
           padding: 5,
         }}
       >
@@ -39,7 +40,8 @@ const AboutSection = () => {
               fontFamily: "Quantum, sans-serif",
               fontWeight: "bold",
               fontSize: {
-                xs: "5em",
+                xs: "4.5em",
+                sm: "5.5em",
               },
             }}
           >
@@ -53,7 +55,7 @@ const AboutSection = () => {
               padding: 1,
             }}
           >
-            <AnimatedText text="The problem to all of your solutions" />
+            <AnimatedText text="The problem to all of your solutions." />
           </Typography>
         </Box>
       </Box>

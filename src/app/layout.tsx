@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Zilla_Slab } from "next/font/google";
+import { Montserrat } from "next/font/google";
 
 import { Box } from "@mui/material";
 
@@ -7,7 +7,7 @@ import "@/app/globals.css";
 import Navbar from "@/components/Navbar";
 import ThemeProviderWrapper from "@/components/ThemeProviderWrapper";
 
-const zilla = Zilla_Slab({ weight: "500", subsets: ["latin"] });
+const montserrat = Montserrat({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Syntinel Nyx",
@@ -21,9 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={zilla.className}>
+      <body className={montserrat.className}>
         <ThemeProviderWrapper>
-          <Box component="main" sx={{ padding: 5 }}>
+          <Box component="main">
             <Navbar />
             {children}
           </Box>

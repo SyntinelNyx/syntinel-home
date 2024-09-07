@@ -8,10 +8,12 @@ const ThemeProviderWrapper = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <CssBaseline />
-      {children}
-    </ThemeProvider>
+    <>
+      <ThemeProvider theme={defaultTheme}>
+        <CssBaseline />
+        {children}
+      </ThemeProvider>
+    </>
   );
 };
 
