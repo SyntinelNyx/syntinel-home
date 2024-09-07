@@ -38,6 +38,9 @@ const AboutSection = () => {
               textAlign: "center",
               fontFamily: "Quantum, sans-serif",
               fontWeight: "bold",
+              fontSize: {
+                xs: "5em",
+              },
             }}
           >
             <AnimatedText text="syntinel" />
