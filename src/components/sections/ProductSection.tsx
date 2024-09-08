@@ -1,7 +1,8 @@
 "use client";
 import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
-import CaptionedImage, { ALIGN } from "../CaptionedImage";
+
+import CaptionedImage, { ALIGN } from "@/components/CaptionedImage";
 
 const ProductSection = () => {
   return (
@@ -31,7 +32,6 @@ const ProductSection = () => {
             infrastructure.
           </Typography>
         </motion.div>
-
         <Box sx={{ display: "flex", margin: 3 }}>
           <Box
             sx={{
