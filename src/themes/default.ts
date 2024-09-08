@@ -11,7 +11,7 @@ const themeOptions: ThemeOptions = {
     },
     background: {
       default: "#000000",
-      paper: "#272727",
+      paper: "#0d0d0d",
     },
     text: {
       primary: "#e5f7e3",

@@ -12,7 +12,6 @@ const TeamSection = () => {
           flexDirection: "column",
           alignItems: "center",
           textAlign: "center",
-          padding: 5,
         }}
       >
         <Typography variant="h4" sx={{ fontWeight: "bold" }}>

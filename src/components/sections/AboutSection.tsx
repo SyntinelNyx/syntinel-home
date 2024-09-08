@@ -51,7 +51,6 @@ const AboutSection = () => {
             variant="h5"
             sx={{
               textAlign: "center",
-              fontStyle: "italic",
               padding: 1,
             }}
           >

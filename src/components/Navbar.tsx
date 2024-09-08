@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
 
 import {
   AppBar,
@@ -30,8 +29,33 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
+  };
+
+  const handleLink = (link: string) => {
+    if (!link.startsWith("#")) {
+      window.location.href = link;
+      return;
+    }
+
+    const element = document.querySelector(link);
+    if (element) {
+      window.scrollTo({
+        top: element.getBoundingClientRect().top + window.scrollY - 100,
+      });
+    }
   };
 
   const drawer = (
@@ -56,32 +80,20 @@ const Navbar = () => {
                 textAlign: "center",
                 justifyContent: "center",
               }}
+              onClick={() => handleLink(item.link)}
             >
-              <Link href={item.link}>
-                <ListItemText
-                  primary={item.label}
-                  sx={{
-                    textAlign: "center",
-                  }}
-                />
-              </Link>
+              <ListItemText
+                primary={item.label}
+                sx={{
+                  textAlign: "center",
+                }}
+              />
             </ListItemButton>
           </ListItem>
         ))}
       </List>
     </Box>
   );
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
-    };
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <>
@@ -129,8 +141,9 @@ const Navbar = () => {
                         color: "primary.dark",
                       },
                     }}
+                    onClick={() => handleLink(item.link)}
                   >
-                    <Link href={item.link}>{item.label}</Link>
+                    {item.label}
                   </Box>
                 ))}
               </Box>

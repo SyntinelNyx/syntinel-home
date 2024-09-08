@@ -12,8 +12,8 @@ const FooterSection = () => {
           flexDirection: "column",
           alignItems: "center",
           textAlign: "center",
-          padding: 5,
           backgroundColor: "background.paper",
+          padding: 5,
         }}
       ></Box>
     </>
