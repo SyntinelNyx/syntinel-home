@@ -2,7 +2,7 @@
 import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 
-export enum ALIGN {
+export enum Align {
   LEFT,
   RIGHT,
 }
@@ -18,7 +18,7 @@ const CaptionedImage = ({
   alt: string;
   caption: string;
   subtitle: string;
-  align: ALIGN;
+  align: Align;
 }) => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
@@ -61,7 +61,7 @@ const CaptionedImage = ({
           }}
         >
           {/* Renders left/top caption when align is left or screen size is small*/}
-          {(align === ALIGN.LEFT || isSmallScreen) && captionText}
+          {(align === Align.LEFT || isSmallScreen) && captionText}
           <Box
             component="img"
             src={src}
@@ -74,7 +74,7 @@ const CaptionedImage = ({
             }}
           />
           {/* Renders right caption when align is left and screen size is not small*/}
-          {align === ALIGN.RIGHT && !isSmallScreen && captionText}
+          {align === Align.RIGHT && !isSmallScreen && captionText}
         </Box>
       </motion.div>
     </>

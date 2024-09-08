@@ -2,7 +2,7 @@
 import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 
-import CaptionedImage, { ALIGN } from "@/components/CaptionedImage";
+import CaptionedImage, { Align } from "@/components/CaptionedImage";
 
 const ProductSection = () => {
   return (
@@ -32,36 +32,34 @@ const ProductSection = () => {
             infrastructure.
           </Typography>
         </motion.div>
-        <Box sx={{ display: "flex", margin: 3 }}>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              margin: 1,
-            }}
-          >
-            <CaptionedImage
-              src="/manage.png"
-              alt="Manage Assets Image"
-              caption="Manage"
-              subtitle="Manage your assets"
-              align={ALIGN.LEFT}
-            />
-            <CaptionedImage
-              src="/patch.png"
-              alt="Patch Vulnerabilities Image"
-              caption="Patch"
-              subtitle="Patch your vulnerabilities"
-              align={ALIGN.RIGHT}
-            />
-            <CaptionedImage
-              src="/test.png"
-              alt="Test Infrastructures Image"
-              caption="Test"
-              subtitle="Test your infrastructures"
-              align={ALIGN.LEFT}
-            />
-          </Box>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            margin: 1,
+          }}
+        >
+          <CaptionedImage
+            src="/manage.png"
+            alt="Manage Assets Image"
+            caption="Manage"
+            subtitle="Manage your assets"
+            align={Align.LEFT}
+          />
+          <CaptionedImage
+            src="/patch.png"
+            alt="Patch Vulnerabilities Image"
+            caption="Patch"
+            subtitle="Patch your vulnerabilities"
+            align={Align.RIGHT}
+          />
+          <CaptionedImage
+            src="/test.png"
+            alt="Test Infrastructures Image"
+            caption="Test"
+            subtitle="Test your infrastructures"
+            align={Align.LEFT}
+          />
         </Box>
       </Box>
     </>
