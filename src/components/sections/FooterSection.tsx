@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 const FooterSection = () => {
   return (
@@ -7,7 +7,7 @@ const FooterSection = () => {
         component="section"
         id="footer"
         sx={{
-          minHeight: "30vh",
+          minHeight: "10vh",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -15,7 +15,9 @@ const FooterSection = () => {
           backgroundColor: "background.paper",
           padding: 5,
         }}
-      ></Box>
+      >
+        <Typography variant="subtitle1">© 2024 Syntinel Inc.</Typography>
+      </Box>
     </>
   );
 };
