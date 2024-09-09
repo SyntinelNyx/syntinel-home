@@ -84,6 +84,7 @@ const TeamSection = () => {
           <Box
             sx={{
               display: "flex",
+              maxWidth: { md: "100vw", lg: "60vw" },
               flexDirection: { xs: "column", md: "row" },
               margin: 3,
             }}
