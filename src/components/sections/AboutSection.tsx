@@ -1,4 +1,4 @@
-import { Typography, Box } from "@mui/material";
+import { Typography, Box, Button } from "@mui/material";
 
 import AnimatedText from "@/components/AnimatedText";
 
@@ -56,6 +56,19 @@ const AboutSection = () => {
           >
             <AnimatedText text="The problem to all of your solutions." />
           </Typography>
+          <Button
+            sx={{
+              backgroundColor: "background.paper",
+              borderRadius: 7.5,
+              paddingX: 4,
+              paddingY: 2,
+              margin: 3,
+            }}
+          >
+            <Typography variant="h6" sx={{}}>
+              Get Started
+            </Typography>
+          </Button>
         </Box>
       </Box>
     </>

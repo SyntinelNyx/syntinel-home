@@ -19,19 +19,26 @@ const ProductSection = () => {
         }}
       >
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.5 }}
         >
           <Typography variant="h4" sx={{ fontWeight: "bold" }}>
             Syntinel Nyx
           </Typography>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
           <Typography variant="h6">
             Our solution for automated asset management, stable vulnerabilities
             patching, and seamless testing all integrated within your
             infrastructure.
           </Typography>
         </motion.div>
+
         <Box
           sx={{
             display: "flex",
