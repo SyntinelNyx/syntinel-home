@@ -1,5 +1,8 @@
 "use client";
+import React from "react";
+
 import { ThemeProvider, CssBaseline } from "@mui/material";
+
 import defaultTheme from "@/themes/default";
 
 const ThemeProviderWrapper = ({
