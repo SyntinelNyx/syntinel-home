@@ -1,4 +1,6 @@
 "use client";
+import React from "react";
+
 import { Box, Card, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 

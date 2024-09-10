@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import React, { useState } from "react";
 
 import { Box, Typography, TextField, Button, Snackbar } from "@mui/material";
 import { motion } from "framer-motion";
@@ -41,7 +41,11 @@ const ContactSection = () => {
       }
 
       setSnackbar({ open: true, message: "Message sent successfully!" });
-      setFormData({} as FormState);
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
     } catch (err) {
       console.error("Error sending message:", err);
       setSnackbar({
