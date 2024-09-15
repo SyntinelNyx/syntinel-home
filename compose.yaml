@@ -1,5 +1,4 @@
-version: '3.9'
-name: Syntinel Home
+name: syntinel-home
 services:
   syntinel-home:
     image: syntinel-home:latest

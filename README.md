@@ -25,3 +25,10 @@ npm run start
 docker build -t syntinel-home .
 docker run -it -d -p 3000:3000 --name syntinel-home -e DISCORD_WEBHOOK_URL="<YOUR_DISCORD_WEBHOOK_URL>" syntinel-home:latest
 ```
+
+or with Docker Compose
+
+```
+chmod u+x install.sh
+./install.sh
+```
