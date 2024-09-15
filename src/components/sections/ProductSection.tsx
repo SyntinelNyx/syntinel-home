@@ -49,21 +49,21 @@ const ProductSection = () => {
           }}
         >
           <CaptionedImage
-            src="/manage.png"
+            src="/manage.webp"
             alt="Manage Assets Image"
             caption="Manage"
             subtitle="Manage your assets"
             align={Align.LEFT}
           />
           <CaptionedImage
-            src="/patch.png"
+            src="/patch.webp"
             alt="Patch Vulnerabilities Image"
             caption="Patch"
             subtitle="Patch your vulnerabilities"
             align={Align.RIGHT}
           />
           <CaptionedImage
-            src="/test.png"
+            src="/test.webp"
             alt="Test Infrastructures Image"
             caption="Test"
             subtitle="Test your infrastructures"

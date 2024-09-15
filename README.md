@@ -16,7 +16,7 @@ Create a file called `.env` and copy the content from `.env.example` over, and r
 ```
 npm install
 npm run build
-node .next/standalone/server.js
+npm run start
 ```
 
 ### Docker Deployment

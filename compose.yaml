@@ -1,0 +1,15 @@
+version: '3.9'
+name: Syntinel Home
+services:
+  syntinel-home:
+    image: syntinel-home:latest
+    build:
+      context: .
+    stdin_open: true
+    tty: true
+    ports:
+      - 3000:3000
+    container_name: syntinel-home
+    environment:
+      - DISCORD_WEBHOOK_URL="<YOUR_DISCORD_WEBHOOK_URL>"
+    restart: always

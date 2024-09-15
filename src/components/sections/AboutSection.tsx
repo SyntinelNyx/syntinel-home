@@ -21,7 +21,7 @@ const AboutSection = () => {
       >
         <Box
           component="img"
-          src={"/hero.jpg"}
+          src={"/hero.webp"}
           alt={"Background Hero Banner"}
           sx={{
             position: "absolute",

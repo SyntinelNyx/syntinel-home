@@ -91,7 +91,7 @@ const TeamSection = () => {
               margin: 3,
             }}
           >
-            <MemberCard src="/jasmine.png" alt="Picture of Jasmine" />
+            <MemberCard src="/jasmine.webp" alt="Picture of Jasmine" />
             <MemberCard src="/miguel.png" alt="Picture of Miguel" />
             <MemberCard src="/christian.png" alt="Picture of Christian" />
           </Box>
