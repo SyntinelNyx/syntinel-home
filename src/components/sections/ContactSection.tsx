@@ -64,7 +64,6 @@ const ContactSection = () => {
       component="section"
       id="contact"
       sx={{
-        minHeight: "30vh",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",

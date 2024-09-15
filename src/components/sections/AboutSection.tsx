@@ -11,7 +11,6 @@ const AboutSection = () => {
         component="section"
         id="about"
         sx={{
-          minHeight: "130vh",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -19,21 +18,6 @@ const AboutSection = () => {
           padding: 5,
         }}
       >
-        <Box
-          component="img"
-          src={"/hero.webp"}
-          alt={"Background Hero Banner"}
-          sx={{
-            position: "absolute",
-            inset: 0,
-            zIndex: -1,
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            marginTop: "30vh",
-            filter: "invert(1)",
-          }}
-        />
         <Box sx={{ marginTop: "5vh" }}>
           <Typography
             variant="h1"
@@ -71,6 +55,17 @@ const AboutSection = () => {
               Get Started
             </Typography>
           </Button>
+          <Box
+            component="img"
+            src={"/hero.webp"}
+            alt={"Background Hero Banner"}
+            sx={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              filter: "invert(1)",
+            }}
+          />
         </Box>
       </Box>
     </>

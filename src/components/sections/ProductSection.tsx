@@ -13,7 +13,6 @@ const ProductSection = () => {
         component="section"
         id="product"
         sx={{
-          minHeight: "100vh",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",

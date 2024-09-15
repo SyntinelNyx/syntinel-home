@@ -62,7 +62,6 @@ const TeamSection = () => {
         component="section"
         id="team"
         sx={{
-          minHeight: "50vh",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -92,8 +91,8 @@ const TeamSection = () => {
             }}
           >
             <MemberCard src="/jasmine.webp" alt="Picture of Jasmine" />
-            <MemberCard src="/miguel.png" alt="Picture of Miguel" />
-            <MemberCard src="/christian.png" alt="Picture of Christian" />
+            <MemberCard src="/miguel.webp" alt="Picture of Miguel" />
+            <MemberCard src="/christian.webp" alt="Picture of Christian" />
           </Box>
         </motion.div>
       </Box>

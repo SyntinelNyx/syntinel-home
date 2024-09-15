@@ -9,7 +9,6 @@ const FooterSection = () => {
         component="section"
         id="footer"
         sx={{
-          minHeight: "10vh",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
