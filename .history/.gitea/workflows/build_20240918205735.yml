@@ -1,9 +1,9 @@
-name: Build and Push Docker Image
+name: Build and 
 
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main", "GiteaActions"]
+    branches: ["main", GiteaActions]
   pull_request:
 
 jobs:

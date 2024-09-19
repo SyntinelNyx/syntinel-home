@@ -3,7 +3,7 @@ name: Build and Push Docker Image
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main", "GiteaActions"]
+    branches: ["main", "GiteaActions]
   pull_request:
 
 jobs:
