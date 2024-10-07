@@ -12,7 +12,7 @@ const montserrat = Montserrat({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Syntinel Nyx",
-  description: "",
+  description: "The problem to all of your solutions",
 };
 
 export default function RootLayout({
