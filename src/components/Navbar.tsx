@@ -22,7 +22,6 @@ const items = [
   { label: "Product", link: "#product" },
   { label: "Team", link: "#team" },
   { label: "Contact", link: "#contact" },
-  { label: "Get Started", link: "" },
 ];
 
 const Navbar = () => {
@@ -91,6 +90,22 @@ const Navbar = () => {
             </ListItemButton>
           </ListItem>
         ))}
+        <ListItem key={"Get Started"} disablePadding>
+          <ListItemButton
+            sx={{
+              textAlign: "center",
+              justifyContent: "center",
+            }}
+            onClick={() => location.assign("https://app.syntinel.dev")}
+          >
+            <ListItemText
+              primary={"Get Started"}
+              sx={{
+                textAlign: "center",
+              }}
+            />
+          </ListItemButton>
+        </ListItem>
       </List>
     </Box>
   );
@@ -127,6 +142,8 @@ const Navbar = () => {
               <Box
                 sx={{
                   display: { xs: "none", lg: "flex" },
+                  justifyItems: "center",
+                  alignItems: "center",
                 }}
               >
                 {items.map((item) => (
@@ -146,6 +163,26 @@ const Navbar = () => {
                     {item.label}
                   </Box>
                 ))}
+                <Box
+                  key={"Get Started"}
+                  sx={{
+                    backgroundColor: "text.primary",
+                    color: "background.paper",
+                    marginLeft: 5,
+                    paddingX: 3,
+                    paddingY: 1,
+                    fontSize: 24,
+                    fontWeight: "bold",
+                    cursor: "pointer",
+                    borderRadius: 10,
+                    ":hover": {
+                      color: "#4A4A4A",
+                    },
+                  }}
+                  onClick={() => location.assign("https://app.syntinel.dev")}
+                >
+                  {"Get Started"}
+                </Box>
               </Box>
               <IconButton
                 aria-label="open drawer"

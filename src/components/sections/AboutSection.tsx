@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 import { Typography, Box, Button } from "@mui/material";
@@ -44,14 +45,15 @@ const AboutSection = () => {
           </Typography>
           <Button
             sx={{
-              backgroundColor: "background.paper",
+              backgroundColor: "text.primary",
               borderRadius: 7.5,
               paddingX: 4,
               paddingY: 2,
               margin: 3,
             }}
+            onClick={() => location.assign("https://app.syntinel.dev")}
           >
-            <Typography variant="h6" sx={{}}>
+            <Typography variant="h6" sx={{ color: "background.paper" }}>
               Get Started
             </Typography>
           </Button>
