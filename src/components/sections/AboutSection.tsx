@@ -41,7 +41,7 @@ const AboutSection = () => {
               padding: 1,
             }}
           >
-            <AnimatedText text="The problem to all of your solutions." />
+            <AnimatedText text="The solution to your infrastructure security." />
           </Typography>
           <Button
             sx={{

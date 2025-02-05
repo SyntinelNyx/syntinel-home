@@ -18,10 +18,10 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 
 const items = [
-  { label: "About", link: "#about" },
-  { label: "Product", link: "#product" },
-  { label: "Team", link: "#team" },
-  { label: "Contact", link: "#contact" },
+  { label: "About", link: "/about" },
+  { label: "Product", link: "/#product" },
+  { label: "Team", link: "/#team" },
+  { label: "Contact", link: "/#contact" },
 ];
 
 const Navbar = () => {
