@@ -31,10 +31,10 @@ export default function AboutPage() {
               { name: 'David Feil-Seifer', affiliation: 'Instructor' },
               { name: 'Sara Davis', affiliation: 'Instructor' },
               { name: 'Vinh Le', affiliation: 'Teaching Assistant' },
-              { name: 'Levi Scully', affiliation: 'Teaching Assistants' },
+              { name: 'Levi Scully', affiliation: 'Teaching Assistant' },
             ]}
             advisors={[
-              { name: 'Ignacio Astaburuaga', affiliation: 'PhD Candidate & Team Advisor' },
+              { name: 'Ignacio Astaburuaga', affiliation: 'PhD Candidate, Team Advisor, & University of Nevada, Reno Adjunct Faculty' },
             ]}
           />
           <ProjectDescription />

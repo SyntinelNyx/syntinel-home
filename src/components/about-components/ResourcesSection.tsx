@@ -18,7 +18,7 @@ export const ResourcesSection: React.FC = () => {
     "Program Domain Books": [
       {
         title: "The Pragmatic Programmer, 20th Anniversary Edition, Your Journey to Mastery",
-        url: "#",
+        url: "https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/",
         description: "D. Thomas and A. Hunt. Boston: Addison-Wesley, 2019.",
       },
     ],

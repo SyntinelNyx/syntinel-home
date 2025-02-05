@@ -21,7 +21,7 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ teamNumber, teamName, 
   return (
     <Box component="section" sx={{ mb: 4, textAlign: 'center' }}>
       <Typography variant="h4" component="h2" gutterBottom>
-        Team {teamNumber}: {teamName}
+        Team 0{teamNumber}: {teamName}
       </Typography>
       <Grid container spacing={2} justifyContent="center">
         {members.map((member, index) => (
